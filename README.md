@@ -7,6 +7,8 @@ Like coding with potential NPEs? Now you can do it Hollywood style!
 With this plugin installed every time you write `!!` in Kotlin file, 
 you will hear an iconic Hollywood sound effect – [Wilhelm Scream](https://en.wikipedia.org/wiki/Wilhelm_scream).
 
+![Demo](readme/demo.mp4)
+
 ## Installation
 
 ### From Jetbrains Marketplace
