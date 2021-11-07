@@ -1,0 +1,33 @@
+# Unsafe Wilhelm Scream for Intellij IDE
+
+> AAAAAAAAAUUOOUH!
+> <br> _– every Hollywood action movie_
+
+Like coding with potential NPEs? Now you can do it Hollywood style!
+With this plugin installed every time you write `!!` in Kotlin file, 
+you will hear an iconic Hollywood sound effect – [Wilhelm Scream](https://en.wikipedia.org/wiki/Wilhelm_scream).
+
+## Installation
+
+### From Jetbrains Marketplace
+
+TBD
+
+### From Github Releases
+
+Download latest release from [releases](https://github.com/Mishkun/unsafe-wilhelm-scream/releases).
+Then follow Intellij IDE docs about [installing plugin from disk](https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_from_disk).
+
+### From Source
+
+Checkout repository and run the following command
+```shell
+./gradlew assemble
+```
+Then grab the packaged plugin zip from `/build/distributions` folder 
+and install it like a local plugin.
+
+## License
+
+This project is distributed under MIT License. Please refer to [LICENSE.txt](LICENSE.txt) for details.
+
