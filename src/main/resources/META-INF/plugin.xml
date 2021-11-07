@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>io.github.mishkun.unsafe-wilhelm-scream</id>
+    <name>Unsafe Wilhelm Scream</name>
+    <vendor email="mishkun.lev@gmail.com">Mishkun</vendor>
+
+    <description><![CDATA[
+    Plays <a href="https://en.wikipedia.org/wiki/Wilhelm_scream">Wilhelm Scream</a> sound effect when you use not-null assertion operator <em>!!</em> in Kotlin code.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <editorFactoryDocumentListener implementation="io.github.mishkun.WilhelmScreamListener"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
