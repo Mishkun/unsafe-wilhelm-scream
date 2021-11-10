@@ -10,6 +10,7 @@ import com.intellij.openapi.editor.event.DocumentEvent
 import com.intellij.openapi.editor.event.DocumentListener
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.util.TextRange
+import java.io.BufferedInputStream
 import javax.sound.sampled.AudioInputStream
 import javax.sound.sampled.AudioSystem
 
@@ -54,19 +55,21 @@ class WilhelmScreamListener : DocumentListener {
     private fun DocumentEvent.withPreviousChar(): String = document.getText(TextRange((offset-1).coerceAtLeast(0), offset+1))
 
     @Synchronized
-    fun playSound(url: String) {
-        Thread {
-            try {
-                val clip = AudioSystem.getClip()
+    fun playSound(url: String) = Thread {
+        try {
+            val clip = AudioSystem.getClip()
+            val resourceStream = javaClass.getResourceAsStream("/sounds/$url")
+            resourceStream?.let {
+                val bufferedInputStream = BufferedInputStream(resourceStream)
                 val inputStream: AudioInputStream = AudioSystem.getAudioInputStream(
-                    javaClass.getResourceAsStream("/sounds/$url")
+                    bufferedInputStream
                 )
                 clip.open(inputStream)
                 clip.start()
-            } catch (e: Exception) {
-                show(e.message.toString(), notificationType = NotificationType.ERROR)
             }
-        }.start()
-    }
+        } catch (e: Exception) {
+            show(e.message.toString(), notificationType = NotificationType.ERROR)
+        }
+    }.start()
 }
 
