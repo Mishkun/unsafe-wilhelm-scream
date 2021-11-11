@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.mishkun"
-version = "1.0"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -20,9 +20,7 @@ intellij {
     version.set("2020.3")
 }
 tasks.withType<org.jetbrains.intellij.tasks.PatchPluginXmlTask> {
-    changeNotes.set("""
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>""")
+    changeNotes.set("""Fix java.io.IOException by @riegersan""")
     sinceBuild.set("183")
     untilBuild.set("")
 }
