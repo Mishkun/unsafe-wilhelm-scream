@@ -1,5 +1,8 @@
 # Unsafe Wilhelm Scream for Intellij IDE
 
+[![JetBrains IntelliJ Plugins](https://img.shields.io/jetbrains/plugin/v/17970-unsafe-wilhelm-scream?label=version)](https://plugins.jetbrains.com/plugin/17970-unsafe-wilhelm-scream)
+[![jb downloads](https://img.shields.io/jetbrains/plugin/d/17970-unsafe-wilhelm-scream?label=downloads)](https://plugins.jetbrains.com/plugin/17970-unsafe-wilhelm-scream)
+
 > AAAAAAAAAUUOOUH!
 > <br> _– every Hollywood action movie_
 
@@ -15,7 +18,7 @@ https://user-images.githubusercontent.com/12541804/140659382-89944ae1-a1d7-4566-
 
 ### From Jetbrains Marketplace
 
-TBD
+Visit Jetbrains Marketplace using this link https://plugins.jetbrains.com/plugin/17970-unsafe-wilhelm-scream
 
 ### From Github Releases
 
